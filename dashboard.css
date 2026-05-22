@@ -1,0 +1,79 @@
+/* =========================================
+   GAYA UNTUK PAPAN PEMUKA (DASHBOARD)
+   ========================================= */
+
+/* Warna Tema iStudent UiTM (Purple, White, Grey) */
+:root {
+    --uitm-purple: #5e2a84;
+    --uitm-light-purple: #f3ebf8;
+    --uitm-grey: #f8f9fa;
+}
+
+body {
+    background-color: var(--uitm-grey) !important;
+    overflow-y: auto !important; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Tetapan Navbar Atas */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px); /* Tolak saiz sidebar supaya ngam skrin */
+    height: 70px;
+    background-color: white;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+/* Tetapan Sidebar */
+.sidebar {
+    width: 260px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--uitm-purple) !important;
+    transition: all 0.3s ease;
+}
+
+/* Tetapan Kawasan Kandungan Utama */
+.main-content {
+    margin-left: 260px; 
+    margin-top: 70px; /* Jarak untuk navbar atas */
+    min-height: calc(100vh - 70px);
+    transition: all 0.3s ease;
+}
+
+/* Menu Hover & Aktif */
+.hover-nav:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
+}
+.active-nav {
+    background-color: white;
+    color: var(--uitm-purple) !important;
+    font-weight: bold;
+}
+
+/* Kad Ringkasan */
+.summary-card {
+    border-left: 5px solid var(--uitm-purple) !important;
+}
+
+/* Responsif: Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto !important;
+        position: relative !important;
+    }
+    .main-content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .top-navbar {
+        display: none; /* Sembunyikan navbar atas di mobile, guna sidebar saja */
+    }
+}

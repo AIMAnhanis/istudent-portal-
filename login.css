@@ -1,0 +1,36 @@
+/* style.css - i-Student Portal */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+/* Efek cermin (Glassmorphism) yang TEPAT */
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Sangat lutsinar */
+    backdrop-filter: blur(10px) !important;           /* Kesan kabur cermin */
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 20px !important;
+}
+
+/* Jadikan input kotak (tempat menaip) juga transparent supaya ngam */
+.glass-input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+/* Warna tulisan dalam input box (placeholder) */
+.glass-input::placeholder {
+    color: rgba(11, 2, 2, 0.966) !important;
+}
+
+/* Bila klik kotak input */
+.glass-input:focus {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    box-shadow: none !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}

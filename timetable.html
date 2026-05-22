@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iStudent Portal | Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="sidebar text-white p-3 position-fixed vh-100 shadow-sm">
+        <div class="text-center mb-4 mt-3">
+            <h4 class="fw-bold"><i class="bi bi-mortarboard-fill me-2"></i>iStudent</h4>
+            <small class="text-white-50">Information Systems Mgt.</small>
+        </div>
+        <hr class="border-light opacity-50">
+        <ul class="nav flex-column gap-2">
+            <li class="nav-item"><a class="nav-link text-white hover-nav rounded" href="dashboard.html"><i class="bi bi-grid-1x2-fill me-2"></i> Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link text-white hover-nav rounded" href="assignments.html"><i class="bi bi-card-checklist me-2"></i> Assignments</a></li>
+            <li class="nav-item"><a class="nav-link text-white hover-nav rounded" href="notes.html"><i class="bi bi-folder-fill me-2"></i> Notes & Resources</a></li>
+            <li class="nav-item"><a class="nav-link active-nav rounded" href="timetable.html"><i class="bi bi-calendar-week-fill me-2"></i> Timetable</a></li>
+            <li class="nav-item"><a class="nav-link text-white hover-nav rounded" href="profile.html"><i class="bi bi-person-badge-fill me-2"></i> Profile</a></li>
+            <li class="nav-item mt-4"><a class="nav-link text-danger hover-nav rounded bg-white bg-opacity-10" href="login.html"><i class="bi bi-box-arrow-left me-2"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="top-navbar shadow-sm d-flex align-items-center px-4 justify-content-between">
+        <div class="d-none d-md-flex align-items-center" style="width: 300px;">
+            <div class="input-group">
+                <span class="input-group-text bg-light border-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" class="form-control bg-light border-0 shadow-none" placeholder="Search timetable...">
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+            <div class="position-relative" style="cursor: pointer;"><i class="bi bi-bell-fill fs-5 text-secondary"></i></div>
+            <div class="d-flex align-items-center gap-2 border-start ps-3" style="cursor: pointer;">
+                <div class="text-end d-none d-md-block">
+                    <p class="mb-0 fw-bold lh-1 text-dark fs-6">CDIM262 Student</p>
+                    <small class="text-muted" style="font-size: 0.75rem;">Semester 4</small>
+                </div>
+                <i class="bi bi-person-circle fs-2" style="color: #5e2a84;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content p-4 d-flex flex-column">
+        <div class="mb-4">
+            <h3 class="fw-bold mb-0">Class Timetable</h3>
+            <p class="text-muted">Weekly lecture timetable for the current academic session.</p>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded-4 flex-grow-1">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Academic Week</h5>
+                    <span class="badge" style="background-color: #5e2a84;">Group: CDIM262-4A</span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle" style="min-width: 800px;">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width: 15%;">Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold bg-light">08:00 - 10:00</td>
+                                <td class="p-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary border border-primary rounded p-2 fw-semibold">
+                                        IMS566<br><small>Adv. Web Design</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                                <td class="p-3">
+                                    <div class="bg-dark bg-opacity-10 text-dark border border-dark rounded p-2 fw-semibold">
+                                        IMS561<br><small>Web Publishing</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold bg-light">10:00 - 12:00</td>
+                                <td>-</td>
+                                <td class="p-3">
+                                    <div class="bg-warning bg-opacity-10 text-dark border border-warning rounded p-2 fw-semibold">
+                                        IMS564<br><small>UX Design</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                                <td class="p-3">
+                                    <div class="bg-success bg-opacity-10 text-success border border-success rounded p-2 fw-semibold">
+                                        IMS565<br><small>IS Project Mgt</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold bg-light">12:00 - 14:00</td>
+                                <td colspan="5" class="bg-secondary bg-opacity-10 text-muted fst-italic">BREAK / LUNCH BREAK</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold bg-light">14:00 - 16:00</td>
+                                <td class="p-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary border border-primary rounded p-2 fw-semibold">
+                                        LCC501<br><small>English for Prof.</small>
+                                    </div>
+                                </td>
+                                <td class="p-3">
+                                    <div class="bg-info bg-opacity-10 text-info border border-info rounded p-2 fw-semibold">
+                                        IMS560<br><small>Adv. Database Mgt</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                                <td class="p-3">
+                                    <div class="bg-danger bg-opacity-10 text-danger border border-danger rounded p-2 fw-semibold">
+                                        TMC501<br><small>Mandarin Level III</small>
+                                    </div>
+                                </td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-auto pt-4 pb-2 border-top text-center text-muted">
+            <small>&copy; 2026 iStudent Portal. All Rights Reserved. IMS566 Project.</small>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
